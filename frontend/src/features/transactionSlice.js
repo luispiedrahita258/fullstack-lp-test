@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const processTransaction = createAsyncThunk('transaction/processTransaction', async (transactionData) => {
-  const response = await axios.post('http://localhost:3000/transacciones/crear', transactionData);
+  const response = await axios.post('https://s6mggfxu5l.execute-api.us-east-2.amazonaws.com/default/BackendTransaction', transactionData);
   return response.data;
 });
 

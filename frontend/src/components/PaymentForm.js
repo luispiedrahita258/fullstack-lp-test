@@ -97,7 +97,7 @@ const PaymentForm = ({ producto, onClose }) => {
         cardHolder 
       };
       
-      const response = await axios.post('http://localhost:3000/transacciones/crear', transaccionData);
+      const response = await axios.post('https://s6mggfxu5l.execute-api.us-east-2.amazonaws.com/default/BackendTransaction', transaccionData);
       setMensaje(`Transacción ${response.data.estado}: ¡Gracias por tu compra!`);
       setEstadoTransaccion('COMPLETADO'); 
       localStorage.removeItem('paymentData'); 
